@@ -65,9 +65,9 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with: 
-          output: ../results
+          output: results
       - uses: actions/upload-artifact@v3
         with:
           name: codeql-res
-          path: ../results
+          path: results
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
