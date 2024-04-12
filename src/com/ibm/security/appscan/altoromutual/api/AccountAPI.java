@@ -80,7 +80,7 @@ public class AccountAPI extends AltoroAPI {
 		// Get the last 10 transactions
 		String last10Transactions;
 		last10Transactions = this.getLastTenTransactions(accountNo);
-		if (last10Transactions.equals("Error")) {
+		if ("Error".equals(last10Transactions)) {
 			return Response
 					.status(Response.Status.INTERNAL_SERVER_ERROR)
 					.entity("{Error : Unexpected error during transfer}")
@@ -117,7 +117,7 @@ public class AccountAPI extends AltoroAPI {
 		// Get the last 10 transactions
 		String last10Transactions;
 		last10Transactions = this.getLastTenTransactions(accountNo);
-		if (last10Transactions.equals("Error")) {
+		if ("Error".equals(last10Transactions)) {
 			return Response
 					.status(Response.Status.INTERNAL_SERVER_ERROR)
 					.entity("{Error : Unexpected error during transfer}")

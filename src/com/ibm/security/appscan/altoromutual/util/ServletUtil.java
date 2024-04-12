@@ -211,7 +211,7 @@ public class ServletUtil {
 	public static boolean isAppPropertyTrue(String property){
 		String propertyValue = getAppProperty(property).toLowerCase();
 		StringTokenizer tokenizer = new StringTokenizer(propertyValue, " \"'", false);
-		if (tokenizer.countTokens() == 1 && tokenizer.nextToken().equals("true"))
+		if (tokenizer.countTokens() == 1 && "true".equals(tokenizer.nextToken()))
 			return true;
 
 		return false;

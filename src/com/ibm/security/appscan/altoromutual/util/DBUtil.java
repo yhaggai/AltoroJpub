@@ -255,7 +255,7 @@ public class DBUtil {
 		
 		User user = new User(username, firstName, lastName);
 		
-		if (roleString.equalsIgnoreCase("admin"))
+		if ("admin".equalsIgnoreCase(roleString))
 			user.setRole(Role.Admin);
 		
 		return user;
